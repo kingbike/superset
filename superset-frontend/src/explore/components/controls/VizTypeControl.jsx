@@ -47,6 +47,7 @@ const registry = getChartMetadataRegistry();
 const DEFAULT_ORDER = [
   'line',
   'big_number',
+  //'chttl_bit_number',
   'table',
   'filter_box',
   'dist_bar',

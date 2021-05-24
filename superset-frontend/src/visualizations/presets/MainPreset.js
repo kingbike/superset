@@ -21,6 +21,10 @@ import {
   BigNumberChartPlugin,
   BigNumberTotalChartPlugin,
 } from '@superset-ui/legacy-preset-chart-big-number';
+//jerry
+import ChttlBigNumberChartPlugin from '@chttl/chttl-plugin-chart-big-number';
+import { ChttlEventChartPlugin } from '@chttl/plugin-chart-chttl-event';
+
 import CalendarChartPlugin from '@superset-ui/legacy-plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/legacy-plugin-chart-chord';
 import CountryMapChartPlugin from '@superset-ui/legacy-plugin-chart-country-map';
@@ -87,6 +91,10 @@ export default class MainPreset extends Preset {
         new BarChartPlugin().configure({ key: 'bar' }),
         new BigNumberChartPlugin().configure({ key: 'big_number' }),
         new BigNumberTotalChartPlugin().configure({ key: 'big_number_total' }),
+        //jerry
+        new ChttlBigNumberChartPlugin().configure({ key: 'chttl_big_number' }),
+        new ChttlEventChartPlugin().configure({ key: 'chttl_event' }),
+
         new EchartsBoxPlotChartPlugin().configure({ key: 'box_plot' }),
         new BubbleChartPlugin().configure({ key: 'bubble' }),
         new BulletChartPlugin().configure({ key: 'bullet' }),
