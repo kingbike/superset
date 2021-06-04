@@ -47,7 +47,14 @@
     "./node_modules/*superset-ui*/**/src/**/*",
     "./node_modules/*superset-ui*/**/types/**/*",
     // and the type defs of their dependencies
-    "./node_modules/*superset-ui*/**/node_modules/**/*.d.ts"
+    "./node_modules/*superset-ui*/**/node_modules/**/*.d.ts",
+
+    //chttl
+    "./node_modules/*chttl*/**/src/**/*",
+    "./node_modules/*chttl*/**/types/**/*",
+    "./node_modules/*chttl*/**/node_modules/**/*.d.ts"
   ],
-  "exclude": ["./node_modules/*superset-ui*/**/node_modules/@superset-ui/**/*"]
+  "exclude": ["./node_modules/*superset-ui*/**/node_modules/@superset-ui/**/*" 
+    ,"./node_modules/*chttl*/**/node_modules/@chttl/**/*"
+  ]
 }

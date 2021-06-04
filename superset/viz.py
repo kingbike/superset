@@ -815,6 +815,46 @@ class TimeTableViz(BaseViz):
             is_group_by=True if fd.get("groupby") else False,
         )
 
+class ChttlTimeTableViz(BaseViz):
+
+    """A data table with rich time-series related columns"""
+
+    viz_type = "chttl_time_table"
+    verbose_name = _("Time Table View")
+    credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
+    is_timeseries = True
+
+    def query_obj(self) -> QueryObjectDict:
+        d = super().query_obj()
+        fd = self.form_data
+
+        if not fd.get("metrics"):
+            raise QueryObjectValidationError(_("Pick at least one metric"))
+
+        if fd.get("groupby") and len(fd["metrics"]) > 1:
+            raise QueryObjectValidationError(
+                _("When using 'Group By' you are limited to use a single metric")
+            )
+        return d
+
+    def get_data(self, df: pd.DataFrame) -> VizData:
+        if df.empty:
+            return None
+
+        fd = self.form_data
+        columns = None
+        values: Union[List[str], str] = self.metric_labels
+        if fd.get("groupby"):
+            values = self.metric_labels[0]
+            columns = fd.get("groupby")
+        pt = df.pivot_table(index=DTTM_ALIAS, columns=columns, values=values)
+        pt.index = pt.index.map(str)
+        pt = pt.sort_index()
+        return dict(
+            records=pt.to_dict(orient="index"),
+            columns=list(pt.columns),
+            is_group_by=True if fd.get("groupby") else False,
+        )
 
 class PivotTableViz(BaseViz):
 

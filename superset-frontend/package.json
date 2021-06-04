@@ -63,6 +63,9 @@
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
     "@babel/runtime-corejs3": "^7.12.5",
+    "@chttl/plugin-chart-chttl-event": "0.0.5",
+    "@chttl/plugin-chart-chttl-table": "0.0.1",
+    "@chttl/plugin-chart-chttl-time-table": "0.0.0",
     "@data-ui/sparkline": "^0.0.84",
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/cache": "^11.1.3",
@@ -96,8 +99,6 @@
     "@superset-ui/plugin-chart-table": "^0.17.46",
     "@superset-ui/plugin-chart-word-cloud": "0.17.46",
     "@superset-ui/preset-chart-xy": "0.17.46",
-    "@chttl/chttl-plugin-chart-big-number": "0.17.51",
-    "@chttl/plugin-chart-chttl-event": "0.0.0",
     "@vx/responsive": "^0.0.195",
     "abortcontroller-polyfill": "^1.1.9",
     "antd": "^4.9.4",

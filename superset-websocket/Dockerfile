@@ -14,6 +14,10 @@
 # limitations under the License.
 FROM node:14.16.1
 
+ENV http_proxy=http://10.160.3.88:8080
+ENV https_proxy=http://10.160.3.88:8080
+
+
 WORKDIR /home/superset-websocket
 
 COPY . .

@@ -22,8 +22,10 @@ import {
   BigNumberTotalChartPlugin,
 } from '@superset-ui/legacy-preset-chart-big-number';
 //jerry
-import ChttlBigNumberChartPlugin from '@chttl/chttl-plugin-chart-big-number';
+// import ChttlBigNumberChartPlugin from '@chttl/chttl-plugin-chart-big-number';
 import { ChttlEventChartPlugin } from '@chttl/plugin-chart-chttl-event';
+import ChttlTableChartPlugin from '@chttl/plugin-chart-chttl-table';
+import ChttlTimeTableChartPlugin from '@chttl/plugin-chart-chttl-time-table';
 
 import CalendarChartPlugin from '@superset-ui/legacy-plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/legacy-plugin-chart-chord';
@@ -92,8 +94,10 @@ export default class MainPreset extends Preset {
         new BigNumberChartPlugin().configure({ key: 'big_number' }),
         new BigNumberTotalChartPlugin().configure({ key: 'big_number_total' }),
         //jerry
-        new ChttlBigNumberChartPlugin().configure({ key: 'chttl_big_number' }),
+        //new ChttlBigNumberChartPlugin().configure({ key: 'chttl_big_number' }),
         new ChttlEventChartPlugin().configure({ key: 'chttl_event' }),
+        new ChttlTableChartPlugin().configure({ key: 'chttl_table' }),
+        new ChttlTimeTableChartPlugin().configure({ key: 'chttl_time_table' }),
 
         new EchartsBoxPlotChartPlugin().configure({ key: 'box_plot' }),
         new BubbleChartPlugin().configure({ key: 'bubble' }),
