@@ -1,0 +1,25 @@
+chartProps
+ datasource.metrics
+
+ formData
+  colorPicker
+  metric
+  compareLag
+  yAxisformat
+
+ querieseData[0].data
+ rawFormData (跟 formData 好像有重複的部分)
+   傳統的 form 應該是 time 部分
+ width, 
+ height,
+
+
+const  { aaa: aaa2, bbb: bbb2 } = props ; 
+
+取出 aaa2 = proops.aaa  ;  bbb2 = props.bbb; 
+
+
+const  { aaa, bbb } = props ; 
+
+aaa = props.aaa ; 
+bbb = props.bbb ;
